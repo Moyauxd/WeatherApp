@@ -36,6 +36,7 @@ let formSearch = document.querySelector("#search-form");
 formSearch.addEventListener("submit", searchForm);
 
 function displayWeather(response) {
+  console.log(response.data);
   let weatherDesription = response.data.weather[0].description;
   let tempNav = Math.round(response.data.main.temp);
   let degreesNav = document.querySelector("#degrees");
@@ -48,6 +49,11 @@ function displayWeather(response) {
   humidity.innerHTML = ` ${Math.round(response.data.main.humidity)}%`;
   let windspeds = document.querySelector("#windz");
   windspeds.innerHTML = ` ${Math.round(response.data.wind.speed)} mph`;
+  let iconChange = document.querySelector("#iconz");
+  iconChange.setAttribute(
+    "src",
+    ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 
   function changeFah(event) {
     event.preventDefault();

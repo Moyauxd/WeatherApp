@@ -8,6 +8,7 @@ input[type="search"] {
   border: 1px solid rgba(168, 168, 168, 0.5);
   border-radius: 10px;
   text-align: center;
+  font-family: "Bitter", serif;
   display: block;
   margin: 40px auto;
   width: 350px;
@@ -22,6 +23,9 @@ input[type="search"] {
   font-weight: 600;
   font-size: 34px;
   text-align: center;
+  position: relative;
+  left: 470px;
+  bottom: 20px;
 }
 .day {
   margin-top: 40px;
@@ -41,10 +45,9 @@ input[type="search"] {
 }
 .row {
   box-shadow: rgba(168, 168, 168, 0.7);
-}
-.row {
   text-align: center;
 }
+
 .windhum {
   font-size: 10px;
   text-align: right;
@@ -54,7 +57,7 @@ input[type="search"] {
   right: 100px;
 }
 hr {
-  border: 1px solid rgba(29, 113, 242, 0.5);
+  border: 1px solid rgba(29, 113, 242, 0.7);
 }
 .temp {
   font-weight: bold;
@@ -63,8 +66,8 @@ hr {
   text-align: center;
   padding-top: 20px;
   position: relative;
-  bottom: -20px;
-  left: 70px;
+  bottom: 15px;
+  left: 85px;
   color: black;
   font-size: 14px;
 }
@@ -121,4 +124,10 @@ hr {
 }
 #search-input:hover {
   background: #1d71f2;
+}
+#iconz {
+  position: relative;
+  left: 460px;
+  bottom: 20px;
+  margin-left: 10px;
 }
