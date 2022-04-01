@@ -1,14 +1,12 @@
 body {
-  background-color: #13baf1;
-  background-position: 100%;
-  font-family: "Bitter", serif;
+  background: #1c9cf6 !important;
+  font-family: "Bitter", serif !important;
 }
 
 input[type="search"] {
   border: 1px solid rgba(168, 168, 168, 0.5);
   border-radius: 10px;
   text-align: center;
-  font-family: "Bitter", serif;
   display: block;
   margin: 40px auto;
   width: 350px;
@@ -57,7 +55,7 @@ input[type="search"] {
   right: 100px;
 }
 hr {
-  border: 1px solid rgba(29, 113, 242, 0.7);
+  border: 1px solid rgba(29, 98, 201, 0.7 !important);
 }
 .temp {
   font-weight: bold;
