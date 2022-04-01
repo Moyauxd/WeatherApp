@@ -65,7 +65,7 @@ function displayWeather(response) {
 
   function changeTemp(event) {
     event.preventDefault();
-    let celiusChange = Math.round(tempNav - (32 * 5) / 9);
+    let celiusChange = Math.round(((tempNav - 32) * 5) / 9);
     let celciusf = document.querySelector("#degrees");
     celciusf.innerHTML = `${celiusChange}°C`;
   }
