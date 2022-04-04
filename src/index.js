@@ -48,6 +48,7 @@ function getForeCoords(coordinates) {
 }
 
 function displayForecast(response) {
+  console.log(response.data);
   let forecast = response.data.daily;
 
   let forecastEle = document.querySelector("#forecast");
@@ -63,11 +64,14 @@ function displayForecast(response) {
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png"
-          width="65"
+          width="85"
         />
         <div >
           <span > ${Math.round(forecastDay.temp.max)}° </span>/
           <span > ${Math.round(forecastDay.temp.min)}°</span>
+          <br/>
+             <div>${forecastDay.weather[0].description}</div>
+             <br/>
     <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         </div>
       </div>
