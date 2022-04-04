@@ -35,20 +35,19 @@ function searchForm(event) {
 let formSearch = document.querySelector("#search-form");
 formSearch.addEventListener("submit", searchForm);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
 function getForeCoords(coordinates) {
   let apiKey = "8a8ad9029bd968171310f8e561c67847";
   let ForecastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(ForecastUrl).then(displayForecast);
 }
 
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return days[days];
-}
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
 
   let forecastEle = document.querySelector("#forecast");
@@ -67,9 +66,9 @@ function displayForecast(response) {
           width="53"
         />
         <div >
-          <span > ${Math.round(forecastDay.temp.max)}° </span>
+          <span > ${Math.round(forecastDay.temp.max)}° </span>/
           <span > ${Math.round(forecastDay.temp.min)}°</span>
-            <div>${formatDay(forecastDay.dt)}</div>
+    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         </div>
       </div>
       `;
@@ -136,3 +135,9 @@ function currentPos(position) {
   let coordsUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
   axios.get(coordsUrl).then(displayWeather);
 }
+function defaultCity(city) {
+  let apiKey = "8a8ad9029bd968171310f8e561c67847";
+  let weatherUrls = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(weatherUrls).then(displayWeather);
+}
+defaultCity("San Antonio");
