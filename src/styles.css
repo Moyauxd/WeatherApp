@@ -16,6 +16,8 @@ input[type="search"] {
 
 .currently {
   text-align: center;
+  font-weight: 400;
+  font-size: 24px;
 }
 .sixty-five {
   font-weight: 600;

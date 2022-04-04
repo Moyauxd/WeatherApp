@@ -14,7 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container".bg-#19C3FB>
+    <div class="container">
       <form id="search-form">
       <input type="search" placeholder="Search by Location" id="searching" />
       <input type="submit" value="🔍" id="search-input"> </form>
@@ -29,35 +29,15 @@
       <div class="windhum"> Humidity:<span id="humi">87</span></div>
       <div class="windhum">Wind:<span id="windz">7</span></div>
       <hr>
-    </p>
-  </div>
-  <div class="row row-col-4 no-gutters">
-    <div class="col sun "><img src="images/sun.png" width="65px"/> </div>
-    <div class="col cloud"><img src="images/cloud.png" width="65px"/></div>
-    <div class="col wind"><img src="images/windy.png" width="65px"></div>
-    <div class="col rain"><img src="images/rain.png" width="65px"></i></div>
-    <div class="col snow"><img src="images/snow.png" width="65px"></div>
-    <div class="w-100"></div>
-      <div class="col temp">66°</div>
-      <div class="col temp">70°</div>
-      <div class="col temp">77°</div>
-      <div class="col temp">69°</div>
-      <div class="col temp">40°</div>
-      <div class="w-100"></div>
-          <div class="col">Sunny</div>
-          <div class="col">Cloudy</div>
-          <div class="col">Windy</div>
-          <div class="col">Rain</div>
-          <div class="col">Snow</div>
-          <div class="w-100"></div>
-      <div class="col day">Mon</div>
-      <div class="col day">Tue</div>
-      <div class="col day">Wed</div>
-      <div class="col day">Thu</div>
-      <div class="col day">Fri</div>
+ <div class="weather-forecast" id="forecast">
+
+ </div>
+
+</div>
     </div>
-  </div>
-<p class="code"><a href="https://github.com/Moyauxd/WeatherApp" target="_blank">Opens-source code</a> by Moya Rose</p>
+    <small>
+<p class="code"><a href="https://github.com/Moyauxd/WeatherApp" target="_blank" class="linky">Opens-source code</a> by Moya Rose</p>
+    </small>
 <script src="src/index.js"></script> 
   </body>
 </html>
