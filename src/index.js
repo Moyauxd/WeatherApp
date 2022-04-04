@@ -144,4 +144,4 @@ function defaultCity(city) {
   let weatherUrls = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(weatherUrls).then(displayWeather);
 }
-defaultCity("San Antonio");
+defaultCity("Kingston");
